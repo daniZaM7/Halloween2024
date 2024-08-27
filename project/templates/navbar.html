@@ -1,0 +1,5 @@
+<nav>
+  <a href="{{ url_for('login') }}">Iniciar sessão</a>
+  <a href="{{ url_for('criarconta') }}">Criar conta</a>
+  <a href="{{ url_for('perfil', id_usuario=current_user.id) }}">Perfil</a>
+</nav>

@@ -1,0 +1,28 @@
+{% extends "homepage.html" %}
+
+{% block titulo %}
+Login
+{% endblock %}
+
+{% block body %}
+<body>
+
+
+<form method="POST">
+{{form.csrf_token}}
+
+    {{ form.email.label() }}
+    {{ form.email() }}
+
+    {{ form.senha.label() }}
+    {{ form.senha() }}
+
+    {{ form.botao_confirmacao() }}
+
+</form>
+
+
+<a href="{{ url_for('homepage') }}">Sair</a>
+
+</body>
+{% endblock %}
